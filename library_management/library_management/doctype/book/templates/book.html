@@ -1,0 +1,23 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="" style="display: flex;">
+    <img src={{book_image}} style="width: 200px;height: 200px;" alt="">
+    <div class="" style="display: flex; flex-direction: column; margin-left: 10px;align-items: start;">
+        <h1 class="text-xs">{{ title }}</h1>
+        <span class="fs-1">by {{author}}</span>
+        <p >{{isbn}}</p>
+        <p>{{publisher}}</p>
+        {% if status =='Available' %}
+        <button type="button" class="btn btn-success">{{status}}</button>
+        {% else %}
+        <button type="button" class="btn btn-danger">{{status}}</button>
+
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->
